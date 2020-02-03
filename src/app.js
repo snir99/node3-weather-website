@@ -8,7 +8,9 @@ const forecast = require('./utils/forecast');
 const app = express();
 
 // The port we will listen to.
-const port = 3000;
+// 3000 is the port if we use this app locally.
+// process.env.PORT is a port that will be used if we deploy this app externaly (like heroku)
+const port = process.env.PORT || 3000;
 
 // Define paths for Express configuration.
 const publicDirectoryPath = path.join(__dirname, '../public');
