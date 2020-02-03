@@ -14,7 +14,9 @@ const forecast = (latitude, longitude, callback) => {
         } else {
             callback(undefined, body.daily.data[0].summary + ' It is currently ' + 
                                 body.currently.temperature + ' degrees out. There is a ' + 
-                                body.currently.precipProbability + '% chance of rain');
+                                body.currently.precipProbability + '% chance of rain.\n' + 
+                                'Humidity: ' + body.currently.humidity + ',\n' + 
+                                'Wind speed: ' + body.currently.windSpeed);
         }
     });
 };
