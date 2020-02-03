@@ -102,6 +102,6 @@ app.get('*', (req, res) => {
 });
 
 // Telling the server to listen to a cretain port.
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is up on port ' + port);
 });
